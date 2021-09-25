@@ -1,16 +1,21 @@
 package com.example.viewmodel;
 
 import android.util.Log;
+
+import androidx.lifecycle.ViewModel;
+
 import java.util.Random;
 
-public class DataGenerator {
+public class DataGenerator extends ViewModel {
 
     private String TAG = this.getClass().getSimpleName();
     private String myRandomNumber;
 
     public String getNumber() {
         Log.i(TAG, "Get number");
-        createNumber();
+        if (myRandomNumber == null) {
+            createNumber();
+        }
         return myRandomNumber;
     }
 
@@ -18,5 +23,11 @@ public class DataGenerator {
         Log.i(TAG, "Create new number");
         Random random = new Random();
         myRandomNumber = "Number: " + (random.nextInt(10 - 1) + 1);
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        Log.i(TAG, "ViewModel Destroyed");
     }
 }
