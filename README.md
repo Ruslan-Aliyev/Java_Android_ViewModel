@@ -20,6 +20,7 @@ Have to override `onSaveInstanceState(Bundle outState)` & `onRestoreInstanceStat
 - https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyVuVR1LFvpR1K8A0HsIBYx (Section 3)
 
 ![](/Illustrations/new_way.PNG)
+![](/Illustrations/ViewModel_vs_onSaveInstanceState.PNG)
 
 But beware of these changes: https://developer.android.com/jetpack/androidx/releases/lifecycle#2.2.0
 
