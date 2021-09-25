@@ -15,10 +15,16 @@ Have to override `onSaveInstanceState(Bundle outState)` & `onRestoreInstanceStat
 
 ![](/Illustrations/old_way.png)
 
-## JetPack View Model
+## JetPack ViewModel
 
 - https://www.youtube.com/playlist?list=PLlxmoA0rQ-LyVuVR1LFvpR1K8A0HsIBYx (Section 3)
 
 ![](/Illustrations/new_way.png)
 
 But beware of these changes: https://developer.android.com/jetpack/androidx/releases/lifecycle#2.2.0
+
+## JetPack LiveData
+
+Creates that tight-coupling between View and ViewModel (like how MVVM should be).
+
+So when ViewModel's `MutableLiveData<String> myRandomNumber` changes, it will be "observed" and "auto-updated" on the View.
